@@ -28,11 +28,14 @@ void selection_sort(int *array, size_t size)
 				index_min = j;
 			}
 		}
-		/*Swap */
-		tmp = array[index_min];
-		array[index_min] = array[i];
-		array[i] = tmp;
+		if (array[i] != array[index_min])
+		{
+			/*Swap */
+			tmp = array[index_min];
+			array[index_min] = array[i];
+			array[i] = tmp;
 
-		print_array(array, size);
+			print_array(array, size);
+		}
 	}
 }
